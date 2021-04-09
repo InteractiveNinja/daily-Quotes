@@ -4,6 +4,9 @@ module.exports = {
     public: { url: '/', static: true },
     src: { url: '/dist' },
   },
+  env: {
+    "API_LINK": "http://senpais-nas:2500/"
+  },
   plugins: [
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-dotenv',
