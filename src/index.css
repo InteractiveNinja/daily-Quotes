@@ -1,27 +1,40 @@
 html,body,#root{
+
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.App{
-  width: 50%;
-  background-color: #1E192E;
-  padding: 1em;
-  border-radius: 0.5em;
-
+  display: grid;
+  place-items: center;
+  background: rgba( 30, 25, 46, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Roboto";
   background-color: #282c34;
-  
 }
 
-h1{
+.App{
+  display: grid;
+  place-items: center;
+}
+.App button{
+  width: 33%;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border-color: hsl(250, 13%, 18%);
+  background-color: hsl(240, 13%, 18%);
   color: white;
+}
+
+.App h1{
+  padding: 0.5em;
+  font-family: "Roboto";
+  color: white;
+  text-align: center;
 }
