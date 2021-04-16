@@ -20,7 +20,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <h1>{this.state.apiText}</h1>
-        <button onClick={this.getAPI}>Neue Spruch</button>
+        <button onClick={this.getAPI}>Neuer Spruch</button>
       </div>
     )
   }
