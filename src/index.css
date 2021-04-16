@@ -4,6 +4,7 @@ html, body, #root, .App {
 }
 
 body {
+  -webkit-app-region: drag;
   margin: 0;
   padding: 0;
   font-family: "Roboto";
