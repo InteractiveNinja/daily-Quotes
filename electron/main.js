@@ -1,7 +1,8 @@
 const path = require('path');
 
-const { app, BrowserWindow } = require('electron');
-const config = require('dotenv').config()
+const { app } = require('electron');
+const {BrowserWindow} = require('electron-acrylic-window')
+require('dotenv').config()
 
 const isDev = process.env.DEV == "true";
 
@@ -13,10 +14,16 @@ function createWindow() {
     height: 300,
     webPreferences: {
       nodeIntegration: true,
+      // experimentalFeatures: true
     },
     transparent: true,
     frame: false,
-    resizable: false,
+    vibrancy:{
+      theme: "#22222200",
+      effect: "blur",
+      disableOnBlur: false
+    }
+    // resizable: false,
   });
 
   // and load the index.html of the app.
@@ -24,7 +31,7 @@ function createWindow() {
   (isDev)? win.loadURL("http://localhost:8080") : win.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
   
   // Open the DevTools.
-    if (isDev)win.webContents.openDevTools({ mode: 'detach' });
+    // if (isDev)win.webContents.openDevTools({ mode: 'detach' });
 }
 
 // This method will be called when Electron has finished
@@ -46,3 +53,6 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
+
+

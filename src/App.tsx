@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import fetchAPI from './APIFetcher'
+import {remote} from 'electron'
+
+
+remote.process.exit(0)
 
 export default class App extends Component {
   
@@ -21,6 +25,7 @@ export default class App extends Component {
       <div className="App">
         <h1>{this.state.apiText}</h1>
         <button onClick={this.getAPI}>Neuer Spruch</button>
+        <button id="delete">Kill me</button>
       </div>
     )
   }
