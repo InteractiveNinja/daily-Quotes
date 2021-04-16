@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import fetchAPI from './APIFetcher'
-import {remote} from 'electron'
 
 
-remote.process.exit(0)
 
 export default class App extends Component {
   
