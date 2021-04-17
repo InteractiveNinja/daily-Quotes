@@ -2,7 +2,7 @@
   "main": "electron/main.js",
   "scripts": {
     "dev": "concurrently \"npm run snowpack-dev\" \"npm run electron-start\"",
-    "build": "npm run snowpack-build",
+    "prod-dev": "npm run snowpack-build && npm run electron-prod",
     "electron-start": "electron .",
     "electron-prod": "cross-env NODE_ENV=prod electron .",
     "snowpack-dev": "snowpack dev --open none",

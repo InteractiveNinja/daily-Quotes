@@ -11,7 +11,7 @@ body {
 }
 
 .App {
-  background: #282c344d;
+  background-color: #282c344d;
   border-radius: 10px;
   display: grid;
   place-items: center;
@@ -31,6 +31,7 @@ body {
 }
 
 .App h1 {
+  -webkit-app-region: no-drag;
   color: white;
   text-align: center;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.3);

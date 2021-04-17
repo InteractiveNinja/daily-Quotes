@@ -1,19 +1,19 @@
 const path = require('path');
 
-const { app } = require('electron');
+const { app, ipcMain } = require('electron');
 const {BrowserWindow} = require('electron-acrylic-window')
 
-const isDev = process.env.DEV == "true";
 
 
 function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
-    width: 500,
-    height: 300,
+    width: 700,
+    height: 500,
     webPreferences: {
       nodeIntegration: true,
-      // experimentalFeatures: true
+      contextIsolation: false
+
     },
     transparent: true,
     frame: false,
@@ -22,7 +22,6 @@ function createWindow() {
       effect: "blur",
       disableOnBlur: false
     }
-    // resizable: false,
   });
 
   // and load the index.html of the app.
@@ -53,5 +52,8 @@ app.on('activate', () => {
   }
 });
 
+ipcMain.on("killme",() =>{
+  app.exit(0)
+})
 
 
