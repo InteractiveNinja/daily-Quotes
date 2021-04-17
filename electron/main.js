@@ -2,7 +2,6 @@ const path = require('path');
 
 const { app } = require('electron');
 const {BrowserWindow} = require('electron-acrylic-window')
-require('dotenv').config()
 
 const isDev = process.env.DEV == "true";
 
@@ -28,10 +27,10 @@ function createWindow() {
 
   // and load the index.html of the app.
   // win.loadFile("index.html");
-  (isDev)? win.loadURL("http://localhost:8080") : win.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
+  (process.env.NODE_ENV != "prod")? win.loadURL("http://localhost:8080") : win.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
   
   // Open the DevTools.
-    // if (isDev)win.webContents.openDevTools({ mode: 'detach' });
+    if (process.env.NODE_ENV != "prod")win.webContents.openDevTools({ mode: 'detach' });
 }
 
 // This method will be called when Electron has finished

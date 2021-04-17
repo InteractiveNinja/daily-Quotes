@@ -4,7 +4,7 @@
     "dev": "concurrently \"npm run snowpack-dev\" \"npm run electron-start\"",
     "build": "npm run snowpack-build",
     "electron-start": "electron .",
-    "electron-prod": "cross-env NODE_ENV=production electron .",
+    "electron-prod": "cross-env NODE_ENV=prod electron .",
     "snowpack-dev": "snowpack dev --open none",
     "snowpack-prepare": "snowpack install",
     "snowpack-build": "snowpack build"
@@ -29,7 +29,6 @@
     "chai": "^4.2.0",
     "concurrently": "^6.0.2",
     "cross-env": "^7.0.3",
-    "dotenv": "^8.2.0",
     "electron": "^12.0.4",
     "prettier": "^2.0.5",
     "snowpack": "^3.0.1",
