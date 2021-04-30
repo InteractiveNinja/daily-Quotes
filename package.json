@@ -1,6 +1,9 @@
 {
   "main": "electron/main.js",
   "version": "1.0.0",
+  "productName": "Daily Quotes",
+  "name": "Daily-Quotes",
+  "author": "InteractiveNinja",
   "scripts": {
     "dev": "concurrently \"npm run snowpack-dev\" \"npm run electron-start\"",
     "prod-dev": "npm run snowpack-build && npm run electron-prod",
