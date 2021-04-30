@@ -1,13 +1,14 @@
 const path = require('path');
 
-const { app, ipcMain } = require('electron');
-const {BrowserWindow} = require('electron-acrylic-window')
+const { app, ipcMain, BrowserWindow } = require('electron');
+const acrylicWindow = require('electron-acrylic-window').BrowserWindow
 
 
 
 function createWindow() {
   // Create the browser window.
-  const win = new BrowserWindow({
+
+  const win = (process.platform === 'darwin')? new BrowserWindow : new acrylicWindow({
     width: 700,
     height: 500,
     webPreferences: {
