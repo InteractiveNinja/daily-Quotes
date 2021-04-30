@@ -5,7 +5,7 @@ module.exports = {
     src: { url: '/dist' },
   },
   env: {
-    "API_LINK": "http://senpais-nas:2500/"
+    "API_LINK": "http://api.imninja.eu/q/"
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
